@@ -1,10 +1,8 @@
-## Olá 👋
-
-
-**aglsk/aglsk** é um repositório ✨ _especial_ ✨ porque seu `README.md` (este arquivo) aparece em seu perfil do GitHub.
-
-- 👯 Procuro Colaborar Em Projetos
-- 💬 Pergunte-me sobre ...
-- 📫 Como entrar em contato comigo: [Telegram](https://t.me/AGL_SKille)
+- 👋 Olá, sou AGL SK
+- 👀 Estou interessado em: Tecnologia
+- 🌱 Atualmente estou aprendendo: Java & PHP
+- 💞️ Procuro colaborar: Com Projetos
+- 📫 Como entrar em contato comigo: [t.me/AGL_SKille](https://t.me/AGL_SKille)
 - 😄 Pronomes: Ele/dele ou Eles/deles
-- ⚡ Curiosidade: Tecnologia
+- ⚡ Curiosidade: Sou Lerdo
+- ❤ Eu amo: Ser Solteiro

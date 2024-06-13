@@ -4,44 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGL SK</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
     <!-- MDUI CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
     <style>
         body {
-            background-color: #000;
+            background-color: #121212;
             color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         .mdui-appbar {
-            background-color: #121212;
+            background-color: #1e1e1e;
+            box-shadow: none;
         }
 
         .mdui-toolbar {
             color: #fff;
+            font-family: 'Source Code Pro', monospace;
         }
 
         .mdui-card {
             background-color: #1e1e1e;
             color: #fff;
             margin-top: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .mdui-card:hover {
+            transform: scale(1.02);
         }
 
         .repo-link {
             color: #03a9f4;
             font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
         .repo-link:hover {
+            color: #0288d1;
             text-decoration: underline;
         }
 
         .repo-description {
             color: #b0bec5;
             margin-top: 8px;
+            font-size: 1rem;
         }
 
         .container {
             padding-top: 80px;
+        }
+
+        .mdui-card-primary {
+            padding: 16px;
+            border-bottom: 1px solid #424242;
+        }
+
+        .mdui-card-primary-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .mdui-list-item {
+            padding: 16px;
+            border-bottom: 1px solid #424242;
         }
     </style>
 </head>
@@ -93,7 +126,6 @@
 
                             listItem.appendChild(link);
                             listItem.appendChild(description);
-                            
                             repoList.appendChild(listItem);
                         }
                     });

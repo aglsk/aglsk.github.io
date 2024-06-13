@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGL SK</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
     <!-- MDUI CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
     <style>
@@ -18,30 +16,29 @@
         }
 
         .mdui-appbar {
-            background-color: #1e1e1e;
-            box-shadow: none;
+            background-color: #03a9f4;
+            color: #fff;
         }
 
         .mdui-toolbar {
-            color: #fff;
-            font-family: 'Source Code Pro', monospace;
+            justify-content: center;
         }
 
         .mdui-card {
             background-color: #1e1e1e;
             color: #fff;
             margin-top: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
             transition: transform 0.3s;
         }
 
         .mdui-card:hover {
-            transform: scale(1.02);
+            transform: translateY(-5px);
         }
 
         .repo-link {
             color: #03a9f4;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 700;
             text-decoration: none;
             transition: color 0.3s;
@@ -49,13 +46,6 @@
 
         .repo-link:hover {
             color: #0288d1;
-            text-decoration: underline;
-        }
-
-        .repo-description {
-            color: #b0bec5;
-            margin-top: 8px;
-            font-size: 1rem;
         }
 
         .container {
@@ -63,13 +53,17 @@
         }
 
         .mdui-card-primary {
-            padding: 16px;
-            border-bottom: 1px solid #424242;
+            background-color: #03a9f4;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 20px;
         }
 
         .mdui-card-primary-title {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 700;
+            text-align: center;
+            margin: 0;
         }
 
         .mdui-list-item {
@@ -85,9 +79,9 @@
         </div>
     </header>
     <main class="mdui-container container">
-        <div id="repositories" class="mdui-card mdui-shadow-3">
+        <div id="repositories" class="mdui-card mdui-shadow-5">
             <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title mdui-text-color-theme">Meus Repositórios</div>
+                <div class="mdui-card-primary-title">Meus Repositórios</div>
             </div>
             <ul id="repo-list" class="mdui-list">
                 <!-- Repositories will be listed here -->
@@ -112,7 +106,7 @@
                     data.forEach(repo => {
                         if (!hiddenRepos.includes(repo.name)) {
                             const listItem = document.createElement("li");
-                            listItem.classList.add("mdui-list-item", "mdui-ripple", "mdui-shadow-1", "mdui-m-b-2");
+                            listItem.classList.add("mdui-list-item", "mdui-ripple");
 
                             const link = document.createElement("a");
                             link.classList.add("repo-link");
@@ -120,12 +114,7 @@
                             link.setAttribute("target", "_blank");
                             link.textContent = repo.name;
 
-                            const description = document.createElement("div");
-                            description.classList.add("repo-description");
-                            description.textContent = repo.description || "Sem descrição";
-
                             listItem.appendChild(link);
-                            listItem.appendChild(description);
                             repoList.appendChild(listItem);
                         }
                     });

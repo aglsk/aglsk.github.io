@@ -70,27 +70,32 @@
         });
 
         function fetchRepositories() {
+            const hiddenRepos = ["SharkRDP", "Windows-CRD", "WindowsCRD"]; // Adicione os nomes dos repositórios que deseja ocultar
+
             fetch("https://api.github.com/users/aglsk/repos")
                 .then(response => response.json())
                 .then(data => {
                     const repoList = document.getElementById("repo-list");
                     data.forEach(repo => {
-                        const listItem = document.createElement("li");
-                        listItem.classList.add("mdui-list-item", "mdui-ripple", "mdui-shadow-1", "mdui-m-b-2");
+                        if (!hiddenRepos.includes(repo.name)) {
+                            const listItem = document.createElement("li");
+                            listItem.classList.add("mdui-list-item", "mdui-ripple", "mdui-shadow-1", "mdui-m-b-2");
 
-                        const link = document.createElement("a");
-                        link.classList.add("repo-link");
-                        link.setAttribute("href", repo.html_url);
-                        link.setAttribute("target", "_blank");
-                        link.textContent = repo.name;
+                            const link = document.createElement("a");
+                            link.classList.add("repo-link");
+                            link.setAttribute("href", repo.html_url);
+                            link.setAttribute("target", "_blank");
+                            link.textContent = repo.name;
 
-                        const description = document.createElement("div");
-                        description.classList.add("repo-description");
-                        description.textContent = repo.description || "Sem descrição";
+                            const description = document.createElement("div");
+                            description.classList.add("repo-description");
+                            description.textContent = repo.description || "Sem descrição";
 
-                        listItem.appendChild(link);
-                        
-                        repoList.appendChild(listItem);
+                            listItem.appendChild(link);
+                            listItem.appendChild(description);
+                            
+                            repoList.appendChild(listItem);
+                        }
                     });
                 })
                 .catch(error => console.error("Erro ao buscar repositórios:", error));

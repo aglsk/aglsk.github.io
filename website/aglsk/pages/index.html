@@ -109,7 +109,7 @@
 
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
-            &copy; 2024 AGL SK. Todos os direitos reservados.
+            <span id="currentYear">&copy; 2024</span> AGL SK. Todos os direitos reservados.
         </div>
     </footer>
 
@@ -120,6 +120,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             fetchRepositories();
+            updateFooterYear();
         });
 
         async function fetchRepositories() {
@@ -175,6 +176,11 @@
                 console.error(`Erro ao buscar imagem de fundo para o repositório ${repo.name}:`, error);
                 return "https://via.placeholder.com/300x200";
             }
+        }
+
+        function updateFooterYear() {
+            const currentYear = new Date().getFullYear();
+            document.getElementById("currentYear").textContent = `&copy; ${currentYear}`;
         }
     </script>
 </body>

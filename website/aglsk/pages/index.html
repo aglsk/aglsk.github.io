@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGL SK Repositórios</title>
-    <!-- MDUI CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #f0f0f0;
@@ -14,35 +14,22 @@
             padding: 0;
         }
 
-        .mdui-appbar {
-            background-color: #24292e;
-            color: #fff;
-        }
-
-        .mdui-toolbar {
-            justify-content: center;
-        }
-
         .repo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
             padding: 20px;
         }
 
         .repo-card {
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-            cursor: pointer;
             position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-out;
         }
 
         .repo-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
 
         .repo-bg-image {
@@ -66,40 +53,69 @@
             box-sizing: border-box;
         }
 
-        .container {
-            padding-top: 80px;
-            text-align: center;
+        .navbar {
+            background-color: #f4a261; /* Cor de fundo */
+            border-bottom: 1px solid #e76f51; /* Cor da borda inferior */
         }
 
-        .mdui-card-primary {
-            background-color: #24292e;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            padding: 16px;
+        .navbar-brand {
+            color: #ffffff; /* Cor do texto */
+            font-weight: bold; /* Negrito */
+            font-size: 1.5rem; /* Tamanho da fonte */
         }
 
-        .mdui-card-primary-title {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
+        .navbar-nav .nav-link {
+            color: #ffffff; /* Cor do texto */
+            font-weight: bold; /* Negrito */
+            font-size: 1.2rem; /* Tamanho da fonte */
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #2a9d8f; /* Cor do texto ao passar o mouse */
         }
     </style>
 </head>
-<body class="mdui-theme-layout-dark">
-    <header class="mdui-appbar mdui-appbar-fixed">
-        <div class="mdui-toolbar mdui-color-theme">
-            <a href="#" class="mdui-typo-headline">AGL SK Repositórios</a>
-        </div>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">AGL SK</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main class="container">
-        <div id="repositories" class="repo-grid">
+
+    <main class="container repo-grid">
+        <div id="repositories" class="row row-cols-1 row-cols-md-3 g-4">
             <!-- Repositórios serão listados aqui -->
         </div>
     </main>
-    <!-- MDUI JS -->
-    <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            &copy; 2024 AGL SK. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (Optional) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
     <!-- Custom JS -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -121,20 +137,17 @@
                 for (const repo of data) {
                     if (!hiddenRepos.includes(repo.name)) {
                         const card = document.createElement("div");
-                        card.classList.add("repo-card", "mdui-shadow-5");
+                        card.classList.add("col");
 
-                        const bgImageUrl = await getBackgroundImage(repo);
-                        const bgImage = document.createElement("img");
-                        bgImage.classList.add("repo-bg-image");
-                        bgImage.setAttribute("src", bgImageUrl);
-                        bgImage.setAttribute("alt", "Background Image");
-                        card.appendChild(bgImage);
-
-                        const repoName = document.createElement("div");
-                        repoName.classList.add("repo-name");
-                        repoName.textContent = repo.name;
-
-                        card.appendChild(repoName);
+                        const cardContent = `
+                            <div class="card repo-card shadow">
+                                <img src="${await getBackgroundImage(repo)}" class="card-img-top repo-bg-image" alt="Background Image">
+                                <div class="card-body">
+                                    <h5 class="card-title repo-name">${repo.name}</h5>
+                                </div>
+                            </div>
+                        `;
+                        card.innerHTML = cardContent;
 
                         card.addEventListener("click", function() {
                             window.open(repo.html_url, "_blank");

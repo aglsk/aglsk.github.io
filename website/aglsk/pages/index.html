@@ -109,7 +109,7 @@
 
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
-            <span id="currentYear">&copy; 2024</span> AGL SK. Todos os direitos reservados.
+            <span id="currentYear">&copy; <span id="year"></span> AGL SK. Todos os direitos reservados.</span>
         </div>
     </footer>
 
@@ -180,7 +180,7 @@
 
         function updateFooterYear() {
             const currentYear = new Date().getFullYear();
-            document.getElementById("currentYear").textContent = `&copy; ${currentYear}`;
+            document.getElementById("year").textContent = currentYear;
         }
     </script>
 </body>

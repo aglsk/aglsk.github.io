@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGL SK</title>
+    <title>AGL SK Repositórios</title>
     <!-- MDUI CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
     <style>
         body {
-            background-color: #121212;
-            color: #fff;
+            background-color: #f0f0f0;
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
         }
 
         .mdui-appbar {
-            background-color: #03a9f4;
+            background-color: #24292e;
             color: #fff;
         }
 
@@ -25,11 +24,11 @@
         }
 
         .mdui-card {
-            background-color: #1e1e1e;
-            color: #fff;
+            background-color: #fff;
             margin-top: 20px;
-            border-radius: 10px;
+            border-radius: 8px;
             transition: transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .mdui-card:hover {
@@ -37,26 +36,28 @@
         }
 
         .repo-link {
-            color: #03a9f4;
-            font-size: 1.5rem;
-            font-weight: 700;
+            color: #0366d6;
+            font-size: 1.2rem;
+            font-weight: 600;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .repo-link:hover {
-            color: #0288d1;
+            color: #0550ae;
         }
 
         .container {
             padding-top: 80px;
+            display: flex;
+            justify-content: center;
         }
 
         .mdui-card-primary {
-            background-color: #03a9f4;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            padding: 20px;
+            background-color: #24292e;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 16px;
         }
 
         .mdui-card-primary-title {
@@ -64,27 +65,34 @@
             font-weight: 700;
             text-align: center;
             margin: 0;
+            color: #fff;
         }
 
         .mdui-list-item {
             padding: 16px;
-            border-bottom: 1px solid #424242;
+            border-bottom: 1px solid #e1e4e8;
+        }
+
+        .mdui-ripple {
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
 <body class="mdui-theme-layout-dark">
     <header class="mdui-appbar mdui-appbar-fixed">
         <div class="mdui-toolbar mdui-color-theme">
-            <a href="#" class="mdui-typo-headline">AGL SK</a>
+            <a href="#" class="mdui-typo-headline">AGL SK Repositórios</a>
         </div>
     </header>
     <main class="mdui-container container">
-        <div id="repositories" class="mdui-card mdui-shadow-5">
+        <div id="repositories" class="mdui-card">
             <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">Meus Repositórios</div>
+                <div class="mdui-card-primary-title">Meus Repositórios no GitHub</div>
             </div>
             <ul id="repo-list" class="mdui-list">
-                <!-- Repositories will be listed here -->
+                <!-- Repositórios serão listados aqui -->
             </ul>
         </div>
     </main>
@@ -97,7 +105,7 @@
         });
 
         function fetchRepositories() {
-            const hiddenRepos = ["SharkRDP", "Windows-CRD", "WindowsCRD"]; // Adicione os nomes dos repositórios que deseja ocultar
+            const hiddenRepos = ["SharkRDP", "Windows-CRD", "WindowsCRD"]; // Repositórios a serem ocultados
 
             fetch("https://api.github.com/users/aglsk/repos")
                 .then(response => response.json())

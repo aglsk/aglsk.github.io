@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } catch (error) {
                 console.error(`Erro ao buscar imagem de fundo para o repositório ${repo.name}:`, error);
                 return {
-                    background_image: "https://via.placeholder.com/300x200",
+                    background_image: "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled-1150x647.png",
                     repo_name: repo.name
                 };
             }

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const hiddenRepos = ["SharkRDP", "Windows-CRD", "WindowsCRD", "aglsk"]; // Repositórios a serem ocultados
 
             try {
-                const response = await fetch("https://api.github.com/users/aglsk/repos");
+                const response = await fetch("https://animefire.plus/animes/akame-ga-kill-dublado/4");
                 if (!response.ok) {
                     throw new Error(`Erro ao carregar repositórios: ${response.status} ${response.statusText}`);
                 }

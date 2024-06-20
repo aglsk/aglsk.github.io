@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 async function fetchRepositories() {
-    const hiddenRepos = ["SharkRDP", "Windows-CRD", "WindowsCRD", "aglsk"]; // Repositórios a serem ocultados
+    const hiddenRepos = ["SharkRDP", "Windows-CRD", "WindowsCRD", "aglsk", "Tool-Telegram-Oficial"]; // Repositórios a serem ocultados
 
     try {
         const response = await fetch("https://api.github.com/users/aglsk/repos");

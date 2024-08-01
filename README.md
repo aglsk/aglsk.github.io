@@ -11,7 +11,7 @@ Bem-vindo ao meu perfil no GitHub! Sou um desenvolvedor apaixonado por criar sol
 
 ## 📊 Estatísticas
 
-![Estatísticas de Contribuição](https://github-readme-stats.vercel.app/api?username=aglsk&show_icons=true&hide_title=true&hide=prs&count_private=true&include_all_commits=true&theme=radical)
+![Estatísticas de Contribuição](https://github-readme-stats.vercel.app/api?username=aglsk&show_icons=true&count_private=true&include_all_commits=true&theme=radical)
 
 ![Estatísticas de Linguagens](https://github-readme-stats.vercel.app/api/top-langs/?username=aglsk&hide=html&layout=compact&theme=radical)
 

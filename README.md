@@ -4,8 +4,8 @@ Bem-vindo ao meu perfil no GitHub! Sou um desenvolvedor apaixonado por criar sol
 
 ## 🚀 Sobre Mim
 
-- 🎓 Formado em [Sua Área de Estudo]
-- 💼 Experiência em desenvolvimento web, incluindo HTML, CSS, JavaScript e frameworks modernos como Bootstrap e PWA.
+- 🎓 Formado em Nada Por Enquanto
+- 💼 Experiência em desenvolvimento web, incluindo HTML, CSS, JavaScript e PHP modernos como Bootstrap e PWA.
 - 🔧 Familiaridade com ferramentas de criação de aplicativos, como Nativefier e Web2Executable.
 - 🛠️ Experiência em uso de Google Apps Script e API para automação e backup.
 
@@ -24,9 +24,7 @@ Bem-vindo ao meu perfil no GitHub! Sou um desenvolvedor apaixonado por criar sol
 ## 🔗 Contato
 
 - 📧 Email: [seu-email@example.com](mailto:seu-email@example.com)
-- 🌐 Website: [seu-website.com](https://seu-website.com)
-- 🐦 Twitter: [@seu-twitter](https://twitter.com/seu-twitter)
-- 🌟 LinkedIn: [Seu Perfil](https://linkedin.com/in/seu-perfil)
+- 🌐 Website: [aglsk.github.io/aglsk](https://aglsk.github.io/aglsk)
 
 ## 🏆 Conquistas
 
@@ -35,10 +33,10 @@ Bem-vindo ao meu perfil no GitHub! Sou um desenvolvedor apaixonado por criar sol
 
 ## 🎨 Tecnologia e Ferramentas
 
-- **Linguagens de Programação**: HTML, CSS, JavaScript, Python
-- **Frameworks e Bibliotecas**: Bootstrap, React, Vue.js
-- **Ferramentas de Desenvolvimento**: Git, Webpack, VSCode
-- **Serviços**: Google Drive API, ScreenshotAPI
+- **Linguagens de Programação**: HTML, CSS, JavaScript, Python, PHP
+- **Frameworks e Bibliotecas**: Bootstrap
+- **Ferramentas de Desenvolvimento**: Git, Webpack, VSCode, Notepad++
+- **Serviços**: Google Drive API, ScreenshotAPI, Script Google Apps
 
 ---
 

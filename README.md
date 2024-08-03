@@ -17,9 +17,7 @@ Welcome to my GitHub profile! I am a developer passionate about creating innovat
 
 ## 📂 Featured Projects
 
-- **[Project Name 1](link-to-the-project)**: Brief description of the project, technologies used and objective.
-- **[Project Name 2](link-to-the-project)**: Brief description of the project, technologies used and objective.
-- **[Project Name 3](link-to-the-project)**: Brief description of the project, technologies used and objective.
+- **[System-Digital](https://github.com/aglsk/System-Digital)**: System Digital is a digital media management system that allows users to upload, view and manage media files including images, videos and audios. This system is based on PHP and uses MySQL to store and manage data.
 
 ## 🔗 Contact
 

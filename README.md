@@ -1,45 +1,45 @@
-# Olá, Sou AGL SK 👋
+# Hello, I'm AGL SK 👋
 
-Bem-vindo ao meu perfil no GitHub! Sou um desenvolvedor apaixonado por criar soluções inovadoras e impactantes usando as mais recentes tecnologias. Este é o lugar onde compartilho meus projetos e contribuições.
+Welcome to my GitHub profile! I am a developer passionate about creating innovative and impactful solutions using the latest technologies. This is the place where I share my projects and contributions.
 
-## 🚀 Sobre Mim
+## 🚀 About me
 
-- 🎓 Formado em Nada Por Enquanto
-- 💼 Experiência em desenvolvimento web, incluindo HTML, CSS, JavaScript e PHP modernos como Bootstrap e PWA.
-- 🔧 Familiaridade com ferramentas de criação de aplicativos, como Nativefier e Web2Executable.
-- 🛠️ Experiência em uso de Google Apps Script e API para automação e backup.
+- 🎓 Graduated in Nothing for Now
+- 💼 Experience in web development, including modern HTML, CSS, JavaScript and PHP such as Bootstrap and PWA.
+- 🔧 Familiarity with application creation tools such as Nativefier and Web2Executable.
+- 🛠️ Experience using Google Apps Script and API for automation and backup.
 
-## 📊 Estatísticas
+## 📊 Statistics
 
-![Estatísticas de Contribuição](https://github-readme-stats.vercel.app/api?username=aglsk&show_icons=true&count_private=true&include_all_commits=true&theme=radical)
+![Contribution Statistics](https://github-readme-stats.vercel.app/api?username=aglsk&show_icons=true&count_private=true&include_all_commits=true&theme=radical)
 
-![Estatísticas de Linguagens](https://github-readme-stats.vercel.app/api/top-langs/?username=aglsk&hide=html&layout=compact&theme=radical)
+![Language Statistics](https://github-readme-stats.vercel.app/api/top-langs/?username=aglsk&hide=html&layout=compact&theme=radical)
 
-## 📂 Projetos em Destaque
+## 📂 Featured Projects
 
-- **[Nome do Projeto 1](link-para-o-projeto)**: Descrição breve do projeto, tecnologias utilizadas e objetivo.
-- **[Nome do Projeto 2](link-para-o-projeto)**: Descrição breve do projeto, tecnologias utilizadas e objetivo.
-- **[Nome do Projeto 3](link-para-o-projeto)**: Descrição breve do projeto, tecnologias utilizadas e objetivo.
+- **[Project Name 1](link-to-the-project)**: Brief description of the project, technologies used and objective.
+- **[Project Name 2](link-to-the-project)**: Brief description of the project, technologies used and objective.
+- **[Project Name 3](link-to-the-project)**: Brief description of the project, technologies used and objective.
 
-## 🔗 Contato
+## 🔗 Contact
 
-- 📧 Email: [seu-email@example.com](mailto:seu-email@example.com)
+- 📧 Email: [your-email@example.com](mailto:your-email@example.com)
 - 🌐 Website: [aglsk.github.io/aglsk](https://aglsk.github.io/aglsk)
 
-## 🏆 Conquistas
+## 🏆 Achievements
 
-- [Certificação 1](link-para-certificacao) - Descrição da certificação.
-- [Certificação 2](link-para-certificacao) - Descrição da certificação.
+- [Certification 1](link-to-certification) - Description of the certification.
+- [Certification 2](link-to-certification) - Description of the certification.
 
-## 🎨 Tecnologia e Ferramentas
+## 🎨 Technology and Tools
 
-- **Linguagens de Programação**: HTML, CSS, JavaScript, Python, PHP
-- **Frameworks e Bibliotecas**: Bootstrap
-- **Ferramentas de Desenvolvimento**: Git, Webpack, VSCode, Notepad++
-- **Serviços**: Google Drive API, ScreenshotAPI, Script Google Apps
+- **Programming Languages**: HTML, CSS, JavaScript, Python, PHP
+- **Frameworks and Libraries**: Bootstrap
+- **Development Tools**: Git, Webpack, VSCode, Notepad++
+- **Services**: Google Drive API, ScreenshotAPI, Google Apps Script
 
 ---
 
-**"A única maneira de fazer um excelente trabalho é amar o que você faz."** - Steve Jobs
+**"The only way to do great work is to love what you do."** - Steve Jobs
 
-Obrigado por visitar meu perfil! 🚀
+Thank you for visiting my profile! 🚀

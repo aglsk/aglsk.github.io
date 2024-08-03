@@ -21,7 +21,7 @@ Welcome to my GitHub profile! I am a developer passionate about creating innovat
 
 ## 🔗 Contact
 
-- 📧 Email: [your-email@example.com](mailto:your-email@example.com)
+- 📧 Telegram: [@Dev01agl](https://t.me/Dev01agl)
 - 🌐 Website: [aglsk.github.io/aglsk](https://aglsk.github.io/aglsk)
 
 ## 🏆 Achievements

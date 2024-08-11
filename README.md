@@ -19,15 +19,15 @@ Welcome to my GitHub profile! I am a developer passionate about creating innovat
 
 - **[System-Digital](https://github.com/aglsk/System-Digital)**: System Digital is a digital media management system that allows users to upload, view and manage media files including images, videos and audios. This system is based on PHP and uses MySQL to store and manage data.
 
-## 🔗 Contact
-
-- 📧 Telegram: [@Dev01agl](https://t.me/Dev01agl)
-- 🌐 Website: [aglsk.github.io/aglsk](https://aglsk.github.io/aglsk)
+## 🔗 Contact:
+<div>
+<a href="https://t.me/Dev01agl" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-Telegram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a> 
+<a href = "https://aglsk.github.io/aglsk"><img loading="lazy" src="https://img.shields.io/badge/-Website-%230077B5?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a>
+</a>
 
 ## 🏆 Achievements
 
-- [Certification 1](link-to-certification) - Description of the certification.
-- [Certification 2](link-to-certification) - Description of the certification.
+- [Certificate of Participation](link-to-certification) - certificate of participation in empowerpython's python week in practice.
 
 ## 🎨 Technology and Tools
 

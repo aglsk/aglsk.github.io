@@ -31,13 +31,17 @@ Welcome to my GitHub profile! I am a developer passionate about creating innovat
 
 ## 🎨 Technology and Tools
 
-- **Programming Languages**: HTML, CSS, JavaScript, Python, PHP
-- **Frameworks and Libraries**: Bootstrap
-- **Development Tools**: Git, Webpack, VSCode, Notepad++
-- **Services**: Google Drive API, ScreenshotAPI, Google Apps Script
+<img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" width="40" height="40"/><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="40" height="40"/><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" width="40" height="40"/><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original-wordmark.svg" width="40" height="40"/><img loading="lazy"
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png?20170517184425" width="40" height="40"/><img loading="lazy"
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/711px-PHP-logo.svg.png?20180502235434" width="40" height="40"/><img loading="lazy"/>
+
+## I am learning
+
+<img loading="lay" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="40" height="40"/><img loading="lazy"
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_Apps_Script.svg/512px-Google_Apps_Script.svg.png?20221103122014" width="40" height="40"/><img loading="lazy"/>
 
 ---
 
-**"The only way to do great work is to love what you do."** - Steve Jobs
+**"I'm learning the right way."** - Vinícius Rocha
 
 Thank you for visiting my profile! 🚀

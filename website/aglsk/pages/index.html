@@ -5,51 +5,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGL SK Repositórios</title>
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/113151786?v=4" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #2c2c2c;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            color: #2a9d8f;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #2a9d8f;
+        }
+
+        /* Repositories Grid */
+        .repo-grid {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .repo-card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .repo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .repo-bg-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .repo-name {
+            padding: 15px;
+            font-size: 1.3rem;
+            color: #2a9d8f;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #2a9d8f;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Spinner for loading */
+        .spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+
+        .spinner .fas {
+            font-size: 2rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">AGL SK - Projetos</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://aglsk.github.io/aglsk/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/aglsk">GitHub</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://youtube.com/@aglsk_">YouTube</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">AGL SK</a>
+            <ul class="navbar-nav">
+                <li><a class="nav-link" href="https://aglsk.github.io/aglsk/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a class="nav-link" href="https://github.com/aglsk"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a class="nav-link" href="https://youtube.com/@aglsk_"><i class="fab fa-youtube"></i> YouTube</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="container repo-grid">
-        <div id="repositories" class="row">
-            <!-- Repositórios serão listados aqui -->
-        </div>
+    <!-- Main Content -->
+    <main>
+        <section class="repo-grid" id="repositories">
+            <div class="spinner">
+                <i class="fas fa-spinner"></i>
+            </div>
+        </section>
     </main>
 
-    <footer class="text-center text-white">
-        <div class="container">
-            <p id="currentYear">&copy; <span id="year"></span> <a href="https://github.com/aglsk">AGL SK</a> - Todos os direitos reservados.</p>
-        </div>
+    <!-- Footer -->
+    <footer>
+        &copy; <span id="year"></span> <a href="https://github.com/aglsk">AGL SK</a>. Todos os direitos reservados.
     </footer>
 
     <script>
-        // Atualizar ano automaticamente
-        document.getElementById("year").textContent = new Date().getFullYear();
+        document.addEventListener("DOMContentLoaded", function () {
+            fetchRepositories();
+            updateFooterYear();
+        });
+
+        async function fetchRepositories() {
+            const hiddenRepos = ["SharkRDP", "Windows-CRD", "WindowsCRD", "aglsk", "aglsk.github.io"];
+            const repoGrid = document.getElementById("repositories");
+
+            try {
+                const response = await fetch("https://api.github.com/users/aglsk/repos");
+                if (!response.ok) {
+                    throw new Error("Erro ao buscar repositórios.");
+                }
+                const repos = await response.json();
+
+                repoGrid.innerHTML = ""; // Remove o spinner
+                const visibleRepos = repos.filter(repo => !hiddenRepos.includes(repo.name));
+
+                for (const repo of visibleRepos) {
+                    const repoDetails = await getBackgroundImage(repo);
+
+                    const card = document.createElement("div");
+                    card.classList.add("repo-card");
+                    card.innerHTML = `
+                        <img src="${repoDetails.background_image}" alt="${repoDetails.repo_name}" class="repo-bg-image">
+                        <div class="repo-name">${repoDetails.repo_name}</div>
+                    `;
+                    card.addEventListener("click", () => {
+                        window.open(repoDetails.html_url, "_blank");
+                    });
+                    repoGrid.appendChild(card);
+                }
+            } catch (error) {
+                console.error(error);
+                repoGrid.innerHTML = "<p>Ocorreu um erro ao carregar os repositórios.</p>";
+            }
+        }
+
+        async function getBackgroundImage(repo) {
+            try {
+                const response = await fetch(`https://raw.githubusercontent.com/aglsk/${repo.name}/main/inforepo.json`);
+                if (!response.ok) {
+                    throw new Error("Arquivo inforepo.json não encontrado.");
+                }
+                const data = await response.json();
+                return {
+                    background_image: data.background_image || "https://via.placeholder.com/300x200",
+                    repo_name: data.repo_name || repo.name,
+                    html_url: repo.html_url,
+                };
+            } catch (error) {
+                console.error(error);
+                return {
+                    background_image: "https://via.placeholder.com/300x200",
+                    repo_name: repo.name,
+                    html_url: repo.html_url,
+                };
+            }
+        }
+
+        function updateFooterYear() {
+            const yearElement = document.getElementById("year");
+            yearElement.textContent = new Date().getFullYear();
+        }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/script.js"></script>
 </body>
 </html>

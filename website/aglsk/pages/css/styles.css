@@ -1,80 +1,91 @@
 body {
-            background-color: #f0f0f0;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+    background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Gradiente sofisticado */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
 
-        .repo-grid {
-            padding: 20px;
-        }
+.repo-grid {
+    padding: 40px 20px; /* Espaçamento mais confortável */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
-        .repo-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease-out;
-        }
+.repo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    color: #2c3e50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
 
-        .repo-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
+.repo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
 
-        .repo-bg-image {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            object-position: center;
-        }
+.repo-bg-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
 
-        .repo-name {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 10px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-align: center;
-            box-sizing: border-box;
-        }
+.repo-name {
+    background: rgba(44, 62, 80, 0.9); /* Fundo elegante */
+    color: #fff;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
-        .navbar {
-            background-color: #cccccc80; /* Cor de fundo */
-        }
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+}
 
-        .navbar-brand {
-            color: #ffffff; /* Cor do texto */
-            font-weight: bold; /* Negrito */
-            font-size: 1.5rem; /* Tamanho da fonte */
-        }
+.navbar-brand {
+    color: #4ca1af;
+    font-weight: bold;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
 
-        .navbar-nav .nav-link {
-            color: #ffffff; /* Cor do texto */
-            font-weight: bold; /* Negrito */
-            font-size: 1.2rem; /* Tamanho da fonte */
-            transition: all 0.3s ease;
-        }
+.navbar-brand:hover {
+    color: #fff;
+}
 
-        .navbar-nav .nav-link:hover {
-            color: #2a9d8f; /* Cor do texto ao passar o mouse */
-        }
-		
-#bg-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    background: url('../../video/background/background.mp4') no-repeat;
-    background-size: cover;
+.navbar-nav .nav-link {
+    color: #b3c7d6;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4ca1af;
+}
+
+footer {
+    background: #1b2838;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #4ca1af;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

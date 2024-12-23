@@ -27,9 +27,4 @@ jobs:
           curl -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
             -d chat_id=${TELEGRAM_CHAT_ID} \
             -d parse_mode=Markdown \
-            -d text="$(cat <<EOF
-🚀 *Novo push no branch* \`main\`!
-*Commit:* [${COMMIT_TITLE}](${COMMIT_URL})
-*Repositório:* [Clique aqui para acessar](${REPO_URL})
-EOF
-)"
+            -d text="🚀 *Novo push no branch* \`main\`!%0A*Commit:* [${COMMIT_TITLE}](${COMMIT_URL})%0A*Repositório:* [Clique aqui para acessar](${REPO_URL})"

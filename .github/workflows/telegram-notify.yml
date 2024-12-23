@@ -1,0 +1,32 @@
+name: Notificação no Telegram
+
+on:
+  push: # Dispara o workflow em um push no repositório
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Enviar notificação para o Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # Obter informações do commit
+          REPO_URL="https://github.com/${{ github.repository }}"
+          COMMIT_URL="${REPO_URL}/commit/${{ github.sha }}"
+          COMMIT_TITLE=$(git log -1 --pretty=%s)
+
+          # Enviar mensagem formatada
+          curl -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
+            -d chat_id=${TELEGRAM_CHAT_ID} \
+            -d parse_mode=Markdown \
+            -d text="🚀 *Novo push no branch* \`main\`!
+*Commit:* [${COMMIT_TITLE}](${COMMIT_URL})
+*Repositório:* [Clique aqui para acessar](${REPO_URL})"

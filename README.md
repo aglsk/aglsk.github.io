@@ -28,7 +28,7 @@ Welcome to my GitHub profile! I am a developer passionate about creating innovat
 ## 🏆 Achievements
 
 - Certificate of Participation
-<img loading="lazy" src="https://github.com/aglsk/aglsk/blob/main/files/certificate.jpeg" width="500" height="300"/>
+<img loading="lazy" src="https://github.com/aglsk/aglsk.github.io/blob/main/files/certificate.jpeg" width="500" height="300"/>
 
 certificate of participation in empowerpython's python week in practice.
 

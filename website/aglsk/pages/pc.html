@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exposição Gamer - Escolha de Tela</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .tela-selector {
+      text-align: center;
+    }
+    .tela-selector h1 {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .tela-selector button {
+      background: #0ff;
+      color: #000;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .tela-selector button:hover {
+      background: #00f7ff;
+    }
+
+    .video-container {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    iframe {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      z-index: 0;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px; left: 20px;
+      width: 150px;
+      filter: drop-shadow(0 0 10px #00f7ff);
+    }
+
+    .banner {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: rgba(255, 20, 147, 0.9);
+      color: white;
+      font-size: 22px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 0 15px #f0f;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .ticker {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      color: #0f0;
+      font-size: 20px;
+      padding: 12px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      box-shadow: 0 0 10px #0f0;
+      font-weight: bold;
+    }
+
+    .ticker p {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 35s linear infinite;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seleção de tela -->
+  <div class="tela-selector" id="selector">
+    <h1>Selecione o monitor:</h1>
+    <button onclick="carregarTela(1)">Tela 1</button>
+    <button onclick="carregarTela(2)">Tela 2</button>
+  </div>
+
+  <!-- TELA 1: Forza Horizon 5 -->
+  <div class="video-container" id="tela1">
+    <iframe
+      src="https://www.youtube.com/embed/whsZgT2kZTc?autoplay=1&mute=1&controls=1&loop=1&playlist=whsZgT2kZTc"
+      title="Forza Horizon 5 RTX 4090"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+    <div class="overlay">
+      <img src="logo.png" alt="Logo Loja" class="logo" />
+      <div class="banner">⚡ Tela 1: Forza RTX 4090!</div>
+      <div class="ticker">
+        <p>🎮 Forza Horizon 5 com RTX 4090 ao vivo | www.seuloja.com | WhatsApp (00) 90000-0000 | Frete grátis | Até 12x no cartão | @seuloja.oficial</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TELA 2: Mortal Kombat 1 -->
+  <div class="video-container" id="tela2">
+    <iframe
+      src="https://www.youtube.com/embed/JKpjj_WMqW4?autoplay=1&mute=1&controls=1&loop=1&playlist=JKpjj_WMqW4"
+      title="Mortal Kombat 1 Gameplay PS5 4K 60FPS"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+    <div class="overlay">
+      <img src="logo.png" alt="Logo Loja" class="logo" />
+      <div class="banner">🔥 Tela 2: Mortal Kombat 1!</div>
+      <div class="ticker">
+        <p>🥋 Mortal Kombat 1 em 4K PS5 | Periféricos com até 50% OFF | www.seuloja.com | Atendimento técnico | Promoção exclusiva para loja física!</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function carregarTela(numero) {
+      document.getElementById('selector').style.display = 'none';
+      document.getElementById(`tela${numero}`).style.display = 'block';
+      document.body.requestFullscreen?.(); // tenta fullscreen automático
+    }
+  </script>
+
+</body>
+</html>
